@@ -9,19 +9,19 @@ export const AppThemeContext = createContext<AppThemeContextProps | undefined>(
 
 export const AppThemeProvider = ({ children }: { children: ReactNode }) => {
     const savedTheme = localStorage.getItem('theme')
-    const [appTheme, setAppTheme] = useState(savedTheme ?? 'light')
+    const [apptheme, setAppTheme] = useState(savedTheme ?? 'light')
 
-    const toggleTheme = () => {
+    const toggledTheme = () => {
         setAppTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
     }
 
     useEffect(() => {
-        localStorage.setItem('theme', appTheme)
-    }, [appTheme])
+        localStorage.setItem('theme', apptheme)
+    }, [apptheme])
 
     return (
-        <AppThemeContext.Provider value={{ appTheme, toggleTheme }}>
-            <ThemeProvider theme={appTheme === 'light' ? lightTheme : darkTheme}>
+        <AppThemeContext.Provider value={{ apptheme, toggledTheme }}>
+            <ThemeProvider theme={apptheme === 'light' ? lightTheme : darkTheme}>
                 {children}
             </ThemeProvider>
         </AppThemeContext.Provider>
