@@ -5,7 +5,14 @@ import { AppThemeContext } from "@/contexts/AppThemeConstext"
 import Cookies from "js-cookie"
 
 //COMPONENTS
-import { CardComponent, Header, FormComponent, StyledH2, StyledButton } from "@/components"
+import {
+    CardComponent,
+    Header,
+    FormComponent,
+    StyledH2,
+    StyledButton
+}
+    from "@/components"
 import { Container, Grid } from "@mui/material"
 
 //HOOK

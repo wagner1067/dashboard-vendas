@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 //COMPONENTS
 import {
     AvatarList,
@@ -98,7 +100,7 @@ function Home() {
                                     <CardComponent className={highlightsLoading ? 'skeleton-loading skeleton-loading-mh-1' : ''}>
                                         {
                                             !highlightsLoading && highlightsData && (
-                                                <>
+                                                <Link to='/leads' >
                                                     <StyledH2 className="mb-1">
                                                         Leads contactados
                                                     </StyledH2>
@@ -108,7 +110,7 @@ function Home() {
                                                     <StyledSpan>
                                                         {highlightsData[2].subtitle}
                                                     </StyledSpan>
-                                                </>
+                                                </Link>
                                             )
                                         }
                                     </CardComponent>
