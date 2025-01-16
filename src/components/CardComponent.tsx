@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import { pxToRem } from '@/utils'
 
 export const CardComponent = styled.div`
-background-color: ${(props) => props.theme.card.background};
+  background-color: ${(props) => props.theme.card.background};
   border: ${pxToRem(1)} solid ${(props) => props.theme.card.border};
   border-radius: ${pxToRem(8)};
   box-sizing: border-box;
