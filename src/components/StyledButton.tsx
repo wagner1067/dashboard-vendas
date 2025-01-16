@@ -1,10 +1,9 @@
-import styled from "styled-components";
-import { ButtonProps } from "@/types";
-import { pxToRem } from '@/utils';
-
+import styled from 'styled-components'
+import { ButtonProps } from '@/types'
+import { pxToRem } from '@/utils'
 
 export const StyledButton = styled.button<ButtonProps>`
- border-radius: ${pxToRem(8)};
+  border-radius: ${pxToRem(8)};
   border: none;
   box-sizing: border-box;
   cursor: pointer;
